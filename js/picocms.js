@@ -22,9 +22,7 @@
                 height = r.outerHeight(),
                 overlay = $('<div style="cursor:pointer;z-index:10001;position:absolute;font-weight: bold; padding: 3px 5px 3px 5px; background-color: LightBlue;"><span style="color:white;font-family:Arial;font-size: 11px; border: solid 1px white;padding:2px;">edit content: ' + id + '</span></div><div style="cursor:pointer;position:absolute;width:' + width + 'px;height:' + height + 'px; border: solid 1px LightBlue;background-color: LightBlue;filter:alpha(opacity=50);-moz-opacity:0.5;-khtml-opacity: 0.5;opacity: 0.5;z-index: 10000;">&nbsp;</div>');
             var content = r.text();
-            console.log('The fucking conetnt is');
-            console.log(content);
-
+            
             overlay.hide();
 
             var showoverlay = false;
@@ -55,7 +53,6 @@
                 overlay.click(function () {
 
                     if (content) content = $.trim(content);
-                    console.log('|' + content + '|');
                     text.val(content);
                     editor.show();
                     text.focus();
