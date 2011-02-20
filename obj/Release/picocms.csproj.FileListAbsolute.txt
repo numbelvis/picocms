@@ -1,0 +1,5 @@
+C:\Foothill Web\Projects\picocms\picocms\bin\Release\picocms.dll
+C:\Foothill Web\Projects\picocms\picocms\bin\Release\picocms.pdb
+C:\Foothill Web\Projects\picocms\picocms\obj\Release\ResolveAssemblyReference.cache
+C:\Foothill Web\Projects\picocms\picocms\obj\Release\picocms.dll
+C:\Foothill Web\Projects\picocms\picocms\obj\Release\picocms.pdb

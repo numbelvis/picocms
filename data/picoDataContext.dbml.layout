@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="picoDataContext">
+  <DataContextMoniker Name="/picoDataContextDataContext" />
+  <nestedChildShapes>
+    <classShape Id="0bb3f134-b3f6-487b-9326-bdbe85adef7b" absoluteBounds="3.875, 1, 2, 1.26050048828125">
+      <DataClassMoniker Name="/picoDataContextDataContext/ContentRegion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="730fc371-e1b2-4ec5-a78d-cb61604cfc85" absoluteBounds="3.89, 1.46, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
