@@ -1,6 +1,9 @@
 ﻿title:  picocms README
+
 author:  Shawn Kent
+
 targets:  ASP.NET with .NET 3.5
+
 requires:  jQuery 1.4.1 or greater (the one that comes with Visual Studio 2010 projects works ;P)
 
 
@@ -69,6 +72,7 @@ Currently, I am using Linq2Sql to store content in a single database table.  It 
 
 1.  In the database of your application, you must create a table called picocms_ContentRegion.  You can use this SQL script:
 
+``
 CREATE TABLE [dbo].[picocms_ContentRegion](
 	[ContentRegionID] [uniqueidentifier] NOT NULL,
 	[Key] [varchar](100) NOT NULL,
@@ -78,32 +82,32 @@ CREATE TABLE [dbo].[picocms_ContentRegion](
 	[ContentRegionID] ASC
 )WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
 ) ON [PRIMARY]
-
+``
 
 ###web.config changes
 
 1.  Add name of connection string to the database holding table picocms_ContentRegion.
-
+``
   <appSettings>
     <add key="picocms.ConnectionString" value="The name of your connection string or a connection string itself"/>
   </appSettings>
-	
+``
 2.  Add the handler used for making updates to <system.web><httpHandlers> section:
-
+``
 	<system.web>
 		<httpHandlers>
 			<add verb="POST" path="picocms.ashx" type="picocms.web.ContentHandler, picocms" />
 		</httpHandlers>
 	</system.web>
-
+``
 3.  Add a pages/controls directive to every webpage on your site.
-
+``
 	<pages>
 		<controls>
 			<add tagPrefix="pico" namespace="picocms.web" assembly="picocms" />
 		</controls>
 	</pages>
-
+``
 
 ##Your Responsibilities
 
