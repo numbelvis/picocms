@@ -45,9 +45,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="data\ContentRegion.cs" />
-    <Compile Include="data\picoDataContext.cs">
-      <DependentUpon>picoDataContext.dbml</DependentUpon>
-    </Compile>
     <Compile Include="data\picoDataContext.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

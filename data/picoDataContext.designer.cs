@@ -22,7 +22,6 @@ namespace picocms.data
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="numbelvi_JamesAutoService")]
 	public partial class picoDataContextDataContext : System.Data.Linq.DataContext
 	{
 		
@@ -30,9 +29,9 @@ namespace picocms.data
 		
     #region Extensibility Method Definitions
     partial void OnCreated();
-    partial void InsertContentRegion(ContentRegion instance);
-    partial void UpdateContentRegion(ContentRegion instance);
-    partial void DeleteContentRegion(ContentRegion instance);
+    partial void Insertpicocms_ContentRegion(picocms_ContentRegion instance);
+    partial void Updatepicocms_ContentRegion(picocms_ContentRegion instance);
+    partial void Deletepicocms_ContentRegion(picocms_ContentRegion instance);
     #endregion
 		
 		public picoDataContextDataContext(string connection) : 
@@ -59,17 +58,17 @@ namespace picocms.data
 			OnCreated();
 		}
 		
-		public System.Data.Linq.Table<ContentRegion> ContentRegions
+		public System.Data.Linq.Table<picocms_ContentRegion> picocms_ContentRegions
 		{
 			get
 			{
-				return this.GetTable<ContentRegion>();
+				return this.GetTable<picocms_ContentRegion>();
 			}
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ContentRegion")]
-	public partial class ContentRegion : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.picocms_ContentRegion")]
+	public partial class picocms_ContentRegion : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
@@ -92,7 +91,7 @@ namespace picocms.data
     partial void OnTextChanged();
     #endregion
 		
-		public ContentRegion()
+		public picocms_ContentRegion()
 		{
 			OnCreated();
 		}
