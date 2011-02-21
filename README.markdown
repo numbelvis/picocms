@@ -71,11 +71,12 @@ Currently, I am using Linq2Sql to store content in a single database table.  It 
 ###Database
 
 1.  In the database of your application, you must create a table called picocms_ContentRegion.  You can use this SQL script:
+
 	CREATE TABLE [dbo].[picocms_ContentRegion](
 		[ContentRegionID] [uniqueidentifier] NOT NULL,
 		[Key] [varchar](100) NOT NULL,
 		[Text] [nvarchar](max) NOT NULL,
-	 CONSTRAINT [PK_picocms_ContentRegion] PRIMARY KEY CLUSTERED 
+	CONSTRAINT [PK_picocms_ContentRegion] PRIMARY KEY CLUSTERED 
 	(
 		[ContentRegionID] ASC
 	)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
