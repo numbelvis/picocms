@@ -71,7 +71,6 @@ Currently, I am using Linq2Sql to store content in a single database table.  It 
 ###Database
 
 1.  In the database of your application, you must create a table called picocms_ContentRegion.  You can use this SQL script:
-
 	CREATE TABLE [dbo].[picocms_ContentRegion](
 		[ContentRegionID] [uniqueidentifier] NOT NULL,
 		[Key] [varchar](100) NOT NULL,
