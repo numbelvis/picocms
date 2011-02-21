@@ -4,15 +4,15 @@ targets:  ASP.NET with .NET 3.5
 requires:  jQuery 1.4.1 or greater (the one that comes with Visual Studio 2010 projects works ;P)
 
 
-<h2>What is it and how does it works</h2>
+##What is it and how does it works
 
-<h3>What is it?</h3>
+###What is it?
 Picocms offers a simple way of adding inline copy editing to web pages.  Similar to larger content management systems, this allows website copy to be changed very quick and easily.  Unlike the
 larger systems, it offers nothing other than copy editing.  I made this system because some websites I develop are far too simple for a large content management system, but I still want my users to
 be able to change their copy without contacting me.
 
 
-<h3>How does it work?</h3>
+###How does it work?
 
 As simple as I could make it and avoid postbacks!  The system has four parts:
 
@@ -23,7 +23,7 @@ As simple as I could make it and avoid postbacks!  The system has four parts:
 
 Now I will explain each of these:
 
-<h4>.NET UserControl: content.cs</h4>
+####.NET UserControl: content.cs
 The control takes a Tag and Key value and outputs an html tag as specified in Tag with its inner html set to the content specified by the Key.  To make it really useful,
 I also output ANY OTHER attributes on this control into the html tag.  It is important to use this as you would a normal html tag AND NOT AS YOU WOULD AN ASP.NET TAG!
 It really doesn't make sense to fill asp:TextBox with copy content, you can do that yourself if you'd like using the same mechanism I do to get content in content.cs.
@@ -43,14 +43,14 @@ There are two reasons I am using the picocms:content control:
 When content.cs is rendered, it gets content from the ASP.NET cache and stuffs it into the control!  So there is caching and having lots of these content controls will not kill your database with connections.
 
 
-<h4>Javascript for editing content copy</h4>
+####Javascript for editing content copy
 In the web browser, an overlay is added on mouse-over to html tags that contain an attribute: contentregion.  A button is then displayed
 so the content of that html can be edited.  When clicked a TextArea appears containing the element's innerHtml.  The user can edit the text
 and then click Save or Cancel.  When Save is clicked, the value of the TextArea is inserted into the element and the text is sent back
 to the HttpHandler in #2 above.
 
 
-<h4>HttpHandler</h4>
+####HttpHandler
 This is an http handler which does two things:
 	1.  Returns the picocms.js script (Keeps you from having to copy files around as it is an embedded resource)
 	2.  Accepts AUTHENTICATED requests to make content changes.
@@ -58,14 +58,14 @@ This is an http handler which does two things:
 If you are curious about anything more with the HttpHandler, go take a look.  It is very simple.
 
 
-<h4>Database</h4>
+####Database
 Currently, I am using Linq2Sql to store content in a single database table.  It wouldn't be too hard to get into /data/ContentRegion.cs and change what I've done to suit your own data needs!  Any changes made here are BEHIND the cache so you will retain advantages of the ASP.NET cache even if you change how the data is stored/retrieved.
 
 
 
-<h2>What and How to Install</h2>
+##What and How to Install
 
-<h3>Database</h3>
+###Database
 
 1.  In the database of your application, you must create a table called picocms_ContentRegion.  You can use this SQL script:
 
@@ -80,7 +80,7 @@ CREATE TABLE [dbo].[picocms_ContentRegion](
 ) ON [PRIMARY]
 
 
-<h3>web.config changes</h3>
+###web.config changes
 
 1.  Add name of connection string to the database holding table picocms_ContentRegion.
 
@@ -105,7 +105,7 @@ CREATE TABLE [dbo].[picocms_ContentRegion](
 	</pages>
 
 
-<h2>Your Responsibilities</h2>
+##Your Responsibilities
 
 
 1.  Authentication!  Picocms checks that certain requests are authenticated before granting them.  For instance, the 
