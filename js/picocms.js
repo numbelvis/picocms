@@ -1,5 +1,5 @@
 ﻿if (window['$']) {
-
+    // Mikes change
     var picocms = {}
     picocms.App = {
 
