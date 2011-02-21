@@ -54,7 +54,7 @@
       <DependentUpon>picoDataContext.dbml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="web\Cache.cs" />
+    <Compile Include="web\PicoCmsCache.cs" />
     <Compile Include="web\ContentHandler.cs" />
     <Compile Include="web\content.cs">
       <SubType>ASPXCodeBehind</SubType>

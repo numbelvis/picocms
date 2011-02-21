@@ -49,10 +49,21 @@ namespace picocms.web
 
             writer.Write(">");
 
-            string content = ContentRegion.Get(Key) ?? "";
+            string content = GetContent(Key);
             writer.Write(content);
 
             writer.WriteEndTag(Tag);
+        }
+
+        /// <summary>
+        /// Retrieves content region html;
+        /// </summary>
+        /// <param name="key"></param>
+        /// <returns></returns>
+        string GetContent(string key)
+        {
+            var html = PicoCmsCache.GetFromCache(key);
+            return html ?? "";
         }
     }
 }
