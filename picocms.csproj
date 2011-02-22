@@ -78,7 +78,7 @@
     <EmbeddedResource Include="js\picocms.js" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="README" />
+    <Content Include="README.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
