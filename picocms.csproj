@@ -45,15 +45,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="data\ContentRegion.cs" />
-    <Compile Include="data\picoDataContext.cs">
-      <DependentUpon>picoDataContext.dbml</DependentUpon>
-    </Compile>
     <Compile Include="data\picoDataContext.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>picoDataContext.dbml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="web\PicoCmsCache.cs" />
     <Compile Include="web\ContentHandler.cs" />
     <Compile Include="web\content.cs">
       <SubType>ASPXCodeBehind</SubType>
@@ -78,6 +76,9 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="js\picocms.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

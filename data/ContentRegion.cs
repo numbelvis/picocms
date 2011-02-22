@@ -21,8 +21,8 @@ namespace picocms.data
                 var content = GetContentRegion(key, ctx);
 
                 if (content == null)
-                    ctx.ContentRegions.InsertOnSubmit(
-                        new ContentRegion()
+                    ctx.picocms_ContentRegions.InsertOnSubmit(
+                        new picocms_ContentRegion()
                         {
                             ContentRegionID = Guid.NewGuid(),
                             Key = key,
@@ -61,11 +61,11 @@ namespace picocms.data
         /// <param name="key"></param>
         /// <param name="ctx"></param>
         /// <returns></returns>
-        static internal ContentRegion GetContentRegion(string key, picoDataContextDataContext ctx)
+        static internal picocms_ContentRegion GetContentRegion(string key, picoDataContextDataContext ctx)
         {
             if (ctx == null || String.IsNullOrEmpty(key)) return null;
 
-            var query = from cr in ctx.ContentRegions
+            var query = from cr in ctx.picocms_ContentRegions
                         where cr.Key == key
                         select cr;
             return query.FirstOrDefault();
@@ -76,7 +76,7 @@ namespace picocms.data
         /// </summary>
         /// <param name="key"></param>
         /// <returns></returns>
-        static internal ContentRegion GetContentRegion(string key)
+        static internal picocms_ContentRegion GetContentRegion(string key)
         {
             return GetContentRegion(key, new picoDataContextDataContext(ContentRegion.ConnectionString));
         }

@@ -29,7 +29,10 @@ namespace picocms.web
                 var html = request["html"];
 
                 if (!String.IsNullOrEmpty(region))
+                {
                     ContentRegion.Update(region, html);
+                    PicoCmsCache.DumpCache(region);
+                }
             }
         }
 
